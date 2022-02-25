@@ -1,0 +1,16 @@
+__pycache__/
+*.pyc
+*.jsonl
+.DS_Store
+*.txt
+*.csv
+*.json
+*venv/
+*.xml
+*.iml
+*.icns
+*.log
+.idea
+*/zh_list
+*/en_list
+!requirements.txt
