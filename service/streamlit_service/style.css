@@ -1,0 +1,101 @@
+<style>
+    .reportview-container {
+      flex-direction: row-reverse;
+    }
+    header > .toolbar {
+      flex-direction: row-reverse;
+      left: 1rem;
+      right: auto;
+    }
+
+    .sidebar .sidebar-collapse-control,
+    .sidebar.--collapsed .sidebar-collapse-control {
+      left: auto;
+      right: 0.5rem;
+    }
+
+    .sidebar .sidebar-content {
+      transition: margin-right .3s, box-shadow .3s;
+    }
+
+    .sidebar.--collapsed .sidebar-content {
+      margin-left: auto;
+      margin-right: -21rem;
+    }
+
+    @media (max-width: 991.98px) {
+      .sidebar .sidebar-content {
+        margin-left: auto;
+      }
+    }
+
+    .triangle{
+        margin: 0px auto ;
+        width: 3000px auto;
+    }
+    .triangle li{
+        padding: 3px;
+        margin-bottom: 6px;
+    }
+    .triangle li span{
+        display:inline-block;
+        position: relative;
+        border-radius: 7px;
+        background-color: #a6e860;
+        padding: 6px 10px 8px 10px;
+        z-index: 1;
+    }
+    .triangle .textLeft span{
+        display:inline-block;
+        background-color: #DCDCDC;
+    }
+    .triangle li.textLeft:before{
+        content: "";
+        box-sizing: border-box;
+        position: relative;
+        left: -10px;
+        top: 9px;
+    }
+    .triangle li.textLeft span:before{
+        content: "";
+        display: block;
+        width: 0;
+        height: 0;
+        border: 8px solid transparent;
+        border-right: 8px solid #DCDCDC;
+        position: absolute;
+        top: 8px;
+        left: -16px;
+    }
+    .triangle li.textRight:after{
+        content: "";
+        box-sizing: border-box;
+        position: relative;
+        right: -10px;
+        top: 9px;
+    }
+    .triangle li.textRight span:after{
+        content: "";
+        display: block;
+        width: 0;
+        height: 0;
+        border: 8px solid transparent;
+        border-left: 8px solid #a6e860;
+        position: absolute;
+        top: 8px;
+        right: -16px;
+    }
+    li{
+        list-style: none;
+    }
+    .textRight{
+        text-align: right;
+    }
+    .header-img {
+        width: 42px;
+        height: 42px;
+        border-radius: 100px;
+        margin-right:10px;
+        margin-left:10px;
+    }
+</style>

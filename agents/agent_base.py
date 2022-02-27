@@ -11,6 +11,7 @@ class AgentBase(object):
     username = "USER"
     botname = "BOT"
     version = "base"
+    concat_turns = 1
 
     def __init__(self, sess_mgr=None):
         self.sess = sess_mgr
