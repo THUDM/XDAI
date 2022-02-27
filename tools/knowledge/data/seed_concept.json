@@ -1,0 +1,8 @@
+{
+  "topic":"my_topic",
+  "seeds":[
+    "a",
+    "b",
+    "c"
+  ]
+}
