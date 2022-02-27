@@ -67,7 +67,7 @@ python tools/knowledge/explore.py -t init -f tools/knowledge/data/seed_concept.j
 python tools/knowledge/explore.py -t update -f tools/knowledge/data/seed_concept.json -i 1 
 ```
 The parameters are:
-```shell
+```text
 -t,--task:  init | update
 -f,--config_file: config of the specific topic
 -i,--interval: if the task is "update", this set the interval days between two consecutive updates.
@@ -126,7 +126,7 @@ Among which:
 
 #### 4. Interact
 We provide the following ways to interact with the chatbot:
-1. **Terminal**: The simplest way to see the result, which does not require the api server as the prerequisite.
+1. **Terminal**: The simplest way to expeirence the dialogue system, which does not require the api server as the prerequisite.
 ```shell
 bash scripts/run_terminal_chat.sh
 ```
