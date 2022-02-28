@@ -14,3 +14,4 @@ __pycache__/
 */zh_list
 */en_list
 !requirements.txt
+!*stopwords_ch.txt
