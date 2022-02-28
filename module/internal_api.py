@@ -10,7 +10,6 @@ from module.use_plm import api_async, req_api
 
 headers = {
     "Content-Type": "application/json;charset=utf8",
-    "Authorization": "U8QAAHsp3SuTL1GJmuGKS6UM-8Mt1bdVlkc134w0jio",
 }
 
 def get_valid_session(
