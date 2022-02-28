@@ -17,7 +17,7 @@ from database.models import (
 from database.data_types import UtteranceItem
 from database.mongo import Mongodb, MgOpt
 from module import SessionManagerRam, SessionManager
-from agents import stable_version
+from agents import DEFAULT_CHATBOT
 from config import CONFIG
 from .coreweb import app
 logger = get_logger("ChatBotAPI")
@@ -36,7 +36,7 @@ async def query_plain(item: Query) -> ResBody:
         botname = "BOT"
         username = "USER"
 
-    version = brand.version or stable_version.version
+    version = brand.version or DEFAULT_CHATBOT.version
     brand.version = version
     platform = item.platform or PlatformType.api
     logger.info(item.dict())

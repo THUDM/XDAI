@@ -26,9 +26,9 @@ The overall architecture of XDAI is shown as bellow.
 
 ![XDAI Framework](pics/framework-XDAI.png)
 
-XDAI consists of two subsystems: online dialogue generation system & offline knowledge curation. Developers can employ XX and XX for local implementation.
+XDAI consists of two subsystems: online dialogue generation system & offline knowledge curation. 
+Developers can employ their own toolkits and chatbot servers for local implementation.
 
-(TBD) Details About XDAI Component
 
 ### Toolkit
 
@@ -86,7 +86,7 @@ Modify the `sentsim_port` in `TOOL` section in `config/conf.ini` and start the s
 ```shell
 bash tool/deploy_sentsim.sh
 ```
-You can also change the `sbert-model` used from https://huggingface.co/models?library=sentence-transformers
+You can also change the `sbert-model` referring to https://huggingface.co/models?library=sentence-transformers
 
 
 #### QA-generation (based on T5)
@@ -96,8 +96,10 @@ We provide a QA-gen toolkit, and you should modify the `qagen_port` in `TOOL` se
 ```shell
 bash tool/deploy_t5QA.sh.sh
 ```
-It is required that transformer==3.0.0, as the source code's demand.
-This question generation code only supports English question generation, so we use youdao translation for English-Chinese translation, which is implemented in utils/translate.py. This translation interface has a sending limit. If you need to use it, please replace it with your own translation interface.
+
+Notice that `transformer==3.0.0` is required by the source code.
+This question generation code only supports English question generation, so we use youdao translation for English-Chinese translation, which is implemented in `utils/translate.py`. 
+This translation interface has a sending limit. If you need to use it, please replace it with your own translation interface.
 ## Get Started
 
 #### 1. Requirements
@@ -109,8 +111,14 @@ pip install -r requirements.txt
 Get a ready-made PLM generation api or deploy one with the toolkit mentioned above.
 
 #### 3. Design your Bot Agent
+An agent class corresponds to an independent processing flow of prompt manufacturing, which should be derived from the base class in `agents/agent_base.py`:
+```python
+from agents import AgentBase
 
-You can add agent classes in `agents/` , with one base class in `agents/agent_base.py` three examples offered.
+class YourOwnAgent(AgentBase):
+    ...
+```
+You can add agent classes in `agents/`. There are three derived subclasses as examples.
 ```shell
 agents/
 ├── agent_base.py
@@ -119,13 +127,13 @@ agents/
 ├── xdai_kg.py
 └── xdai_kg_specific.py
 ```
-Among which:
 - `xdai_glm.py`: The baseline implementation without knowledge injected using GLM as the PLM.
 - `xdai_kg.py`: GLM + open knowledge injected using [XLore2](https://www.xlore.cn/)
 - `xdai_kg_specific.py`:GLM + specific domain knowledge with self-maintained FAQ db.
 
+After being added, a new class should then be imported in the `agents/__init__.py` and appended to `IN_USE_AGENTS`
 #### 4. Interact
-We provide the following ways to interact with the chatbot:
+The following 3 methods of deployment are offered to interact with the chatbot:
 1. **Terminal**: The simplest way to expeirence the dialogue system, which does not require the api server as the prerequisite.
 ```shell
 bash scripts/run_terminal_chat.sh
