@@ -41,6 +41,10 @@ class ChatAgentGLMBaseline(AgentBase):
             return self.byemsg
 
     def get_concat_history(self, num=None):
+        """
+        :param num: int
+        :return: str
+        """
         username = self.username
         history_selected = self.history[-num:]
         res = [

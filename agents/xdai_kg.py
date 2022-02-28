@@ -47,6 +47,10 @@ class ChatAgent_OPEN(AgentBase):
             return self.byemsg
 
     def get_concat_history(self, num=None):
+        """
+        :param num: int
+        :return: str
+        """
         history_utts = self.get_chatlog_utterances(num=num)
         imported_qapairs = self.get_external_retrieved_qapairs()
         query = self.history[-1]
@@ -96,6 +100,10 @@ class ChatAgent_OPEN(AgentBase):
         return res
 
     def get_chatlog_utterances(self,num):
+        """
+        :param num: int
+        :return: list of dicts:[{"text":"{botname}:{utter_text}","weight":float}]
+        """
         history_selected = self.history[-num:-1][::-1]
         def process_utt(utt, order=0):
             text = utt.get("text")
@@ -114,6 +122,9 @@ class ChatAgent_OPEN(AgentBase):
         return qapairs
 
     def __get_xlore_knowledge(self):
+        """
+        :return:list of dicts:[{"text":"{botname}:{utter_text}","weight":float}]
+        """
         if len(self.history) >= 3:
             utts = [self.history[-1], self.history[-3]]
         else:
@@ -128,7 +139,6 @@ class ChatAgent_OPEN(AgentBase):
         for i, text in enumerate(questions):
             cur_qapairs = Xlore.qa(text=text,trim=100)
             qapairs.extend(cur_qapairs)
-
             if cur_qapairs:
                 break
         qapairs =  qapairs[:3]
@@ -136,7 +146,9 @@ class ChatAgent_OPEN(AgentBase):
         return qapairs
 
     def get_external_retrieved_qapairs(self):
-        ###
+        """
+        :return: List of {"q": q, "text": text, "weight": weight}
+        """
         SourceDict = {
             "coldstart": (self.__get_conversational_cold_start, 0.1),
             "xlore":(self.__get_xlore_knowledge, 0.5)
