@@ -10,5 +10,5 @@ INIFILE=config/conf.ini
 
 SERVER_PORT=( $( __readINI $INIFILE $SECTION $ITEM) )
 echo ${SERVER_PORT}
-cd tools/PLM
+cd tools/PLM/GLM
 uvicorn plm_app:app  --port ${SERVER_PORT} --host '0.0.0.0'  --reload --debug

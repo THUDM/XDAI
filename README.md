@@ -43,6 +43,7 @@ We offer the pack of *GLM* version in `tools/PLM`
     glm_port = <self-defined available port>
     glm_api = http://{ip_address}:{glm_port}/glm
     ```
+   and set the `"load_pretrained"` in the `tools/PLM/GLM/glm_config.json` to be path-to-your-model.
 3. Start the server by running:   
     ```shell
     bash tools/deploy_plm.sh

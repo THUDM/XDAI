@@ -12,7 +12,7 @@ from fastapi import FastAPI
 from pydantic import BaseModel
 import sys
 BASE_DIR = str(Path(__file__).parent.parent)
-sys.path.append(os.path.join(BASE_DIR,"GLM"))
+sys.path.append(os.path.join(BASE_DIR, ""))
 from generate_text import generate_samples,get_prepared
 
 
@@ -73,6 +73,7 @@ async def health():
 @app.post("/glm", summary="ask bot by query string||", response_model=BotsBody)
 async def bot_ask(item: BotModel):
     sentinel["param"].out_seq_length = item.limit
+
     st = time.time()
     res = generate_samples(
         item.query,
