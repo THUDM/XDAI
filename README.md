@@ -16,13 +16,15 @@ We summarize the features of XDAI as follows:
 ## News ‼️
 
 * Our paper "[XDAI: A Tuning-free Framework for Exploiting Pre-trained Language Models in Knowledge Grounded Dialogue Generation]( https://dl.acm.org/doi/10.1145/3534678.3539135)" have been accepted by KDD2022 Applied Data Science track!!
-* The XDAI service can be now experienced via our demo [website](https://models.aminer.cn/xdai/). You can try to interact with different characters and DIY your own “小呆”（nickname of XDAI) and "take it home" from our Wechat Official Account: "[小呆爱聊天](https://github.com/THUDM/XDAI/blob/main/pics/xdai_qrcode.jpg)".
+
+* The XDAI service can be now experienced via our demo [website](https://models.aminer.cn/xdai/). You can try to interact with different characters and DIY your own “小呆”（nickname of XDAI) and "take it home" from our Wechat Official Account: "[小呆爱聊天](https://github.com/THUDM/XDAI/blob/main/pics/xdai_qrcode.jpg)":
 
 <div align=center>
 <img src = "https://github.com/THUDM/XDAI/blob/main/pics/xdai_qrcode.jpg" width=400>
 </div>
-![Official Account](pics/xdai_qrcode.jpg)
+
 * The XDAI domain-specific knowledge exploration toolkits are refined !!
+
 * More Language models are accessible now !!
 
 * Our paper is submitted to KDD2022 Applied Data Science track !!
