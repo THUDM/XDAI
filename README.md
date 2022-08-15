@@ -27,7 +27,7 @@ We summarize the features of XDAI as follows:
 
 * More Language models are accessible now !!
 
-* Our paper is submitted to KDD2022 Applied Data Science track !!
+* Our paper is accepted by KDD2022 Applied Data Science track !!
 
 ## Architecture
 
