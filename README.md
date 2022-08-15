@@ -1,6 +1,6 @@
 # XDAI
 
-Paper | [中文版]()
+[Paper](https://dl.acm.org/doi/10.1145/3534678.3539135) 
 
 XDAI is maintained by the Knowledge Engineering Group of Tsinghua University, and supported by Zhipu.AI & Biendata, which is a tuning-free framework for exploiting pre-trained language models in knowledge grounded dialogue. Employing large-scale models including [GLM](https://github.com/THUDM/GLM) and [CPM](https://github.com/TsinghuaAI/CPM-1-Generate), XDAI provides a basic open-domain dialogue generation service (XDAI-open) and several tools for developers in building domain-specific chatbots (XDAI-domain). 
 
@@ -15,6 +15,8 @@ We summarize the features of XDAI as follows:
 
 ## News ‼️
 
+* Our paper "[XDAI: A Tuning-free Framework for Exploiting Pre-trained Language Models in Knowledge Grounded Dialogue Generation]( https://dl.acm.org/doi/10.1145/3534678.3539135)" have been accepted by KDD2022 Applied Data Science track!!
+* The XDAI service can be now experienced via our demo [website](https://models.aminer.cn/xdai/). You can try to interact with different characters and DIY your own “小呆”（nickname of XDAI) and "take-it-home" from our Wechat Official Account: "小呆爱聊天"
 * The XDAI domain-specific knowledge exploration toolkits are refined !!
 * More Language models are accessible now !!
 
