@@ -16,7 +16,12 @@ We summarize the features of XDAI as follows:
 ## News ‼️
 
 * Our paper "[XDAI: A Tuning-free Framework for Exploiting Pre-trained Language Models in Knowledge Grounded Dialogue Generation]( https://dl.acm.org/doi/10.1145/3534678.3539135)" have been accepted by KDD2022 Applied Data Science track!!
-* The XDAI service can be now experienced via our demo [website](https://models.aminer.cn/xdai/). You can try to interact with different characters and DIY your own “小呆”（nickname of XDAI) and "take-it-home" from our Wechat Official Account: "小呆爱聊天"
+* The XDAI service can be now experienced via our demo [website](https://models.aminer.cn/xdai/). You can try to interact with different characters and DIY your own “小呆”（nickname of XDAI) and "take it home" from our Wechat Official Account: "[小呆爱聊天](https://github.com/THUDM/XDAI/blob/main/pics/xdai_qrcode.jpg)".
+
+<div align=center>
+<img src = "https://github.com/THUDM/XDAI/blob/main/pics/xdai_qrcode.jpg" width=400>
+</div>
+![Official Account](pics/xdai_qrcode.jpg)
 * The XDAI domain-specific knowledge exploration toolkits are refined !!
 * More Language models are accessible now !!
 
@@ -167,5 +172,22 @@ There is a case of how the explored knowledge help lifting the informativeness o
 ![Overall](pics/case.png)
 
 ## Reference
-
-* To be done
+```
+    @inproceedings{10.1145/3534678.3539135,
+    author = {Yu, Jifan and Zhang, Xiaohan and Xu, Yifan and Lei, Xuanyu and Guan, Xinyu and Zhang, Jing and Hou, Lei and Li, Juanzi and Tang, Jie},
+    title = {XDAI: A Tuning-Free Framework for Exploiting Pre-Trained Language Models in Knowledge Grounded Dialogue Generation},
+    year = {2022},
+    isbn = {9781450393850},
+    publisher = {Association for Computing Machinery},
+    address = {New York, NY, USA},
+    url = {https://doi.org/10.1145/3534678.3539135},
+    doi = {10.1145/3534678.3539135},
+    abstract = {Large-scale pre-trained language models (PLMs) have shown promising advances on various downstream tasks, among which dialogue is one of the most concerned. However, there remain challenges for individual developers to create a knowledge-grounded dialogue system upon such big models because of the expensive cost of collecting the knowledge resources for supporting the system as well as tuning these large models for the task. To tackle these obstacles, we propose XDAI, a knowledge-grounded dialogue system that is equipped with the prompt-aware tuning-free PLM exploitation and supported by the ready-to-use open-domain external knowledge resources plus the easy-to-change domain-specific mechanism. With XDAI, the developers can leverage the PLMs without any fine-tuning cost to quickly create the open-domain dialogue systems as well as easily customize their own domain-specific systems. Extensive experiments including human evaluation, Turing test, and online evaluation have demonstrated the competitive performance of XDAI compared with the state-of-the-art general PLMs and specific PLMs for dialogue. XDAI pilots studies on the exploitation of PLMs and made intriguing findings which could be inspiring for the future research on other PLM-based applications.Developers and related researchers can get access to our repository at https://github.com/THUDM/XDAI, which presents a series of APIs, incremental toolkits and chatbot service of XDAI platform.},
+    booktitle = {Proceedings of the 28th ACM SIGKDD Conference on Knowledge Discovery and Data Mining},
+    pages = {4422–4432},
+    numpages = {11},
+    keywords = {dialogue systems, pre-trained model exploitation},
+    location = {Washington DC, USA},
+    series = {KDD '22}
+    }
+```
